@@ -1,0 +1,23 @@
+<div class="future-forecast">
+  <div class="today" id="current-temp" [ngClass]="{'selected': firstDaySelected == true}" (click)="toggleHighlight(9)">
+      <img src="{{ weatherForecastIcon[0] }}" alt="weather icon" class="w-icon">
+      <div class="other">
+          <div class="day">{{ time[0] | date:"EE, dd"}}</div>
+          <div class="temp">{{ tempMax[0] }} °C</div>
+          <div class="temp">{{ tempMin[0] }} °C</div>
+          <div class="temp">Wind {{ windSpeed[0] }} km/h</div>
+      </div>
+  </div>
+
+  <div *ngFor="let x of time ; let i = index">
+    <div class="weather-forecast" id="weather-forecast">
+      <div class="weather-forecast-item" *ngIf="time[i + 1]" [ngClass]="{'selected': selectedIndex == i}" (click)="toggleHighlight(i)">
+          <div class="day">{{ time[i + 1] | date:"EE, dd"}}</div>
+          <img src="{{ weatherForecastIcon[i + 1] }}" alt="weather icon" class="w-icon">
+          <div class="temp">{{ tempMax[i + 1] }} °C</div>
+          <div class="temp">{{ tempMin[i + 1] }} °C</div>
+          <div class="temp">Wind {{ windSpeed[i + 1] }} km/h</div>
+      </div>
+    </div>
+</div>
+

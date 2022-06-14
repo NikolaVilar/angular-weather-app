@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="current-info">
+
+    <div class="date-container">
+      <div class="time" id="time">
+        {{ currentTime | date:"HH:mm" }} <span id="am-pm">PM</span>
+      </div>
+
+      <div class="date" id="date">
+          {{ currentTime | date:"EEEE, dd MMM"}}
+      </div>
+
+      <div class="weather-item">
+        <span><img src="{{ weatherForecastIcon }}" alt="icon"></span>
+      </div>
+
+      <div class="others" id="current-weather-items">
+
+        <div class="weather-item">
+          <div>Max</div>
+          <div>{{ tempMax }} °C</div>
+        </div>
+
+        <div class="weather-item">
+          <div>Min</div>
+          <div>{{ tempMin }} °C</div>
+        </div>
+
+        <div class="weather-item">
+          <div>Forecast</div>
+          <div>{{ weatherForecast }}</div>
+        </div>
+
+        <div class="weather-item">
+          <div>Wind</div>
+          <div>{{ windSpeed }} km/h</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="place-container">
+      <div class="time-zone" id="time-zone">{{ timeZone }}</div>
+      <div id="country" class="country">{{ latitude | number:'1.0-0'}} °N, {{ longitude | number:'1.0-0' }} °N</div>
+    </div>
+
+  </div>
+</div>

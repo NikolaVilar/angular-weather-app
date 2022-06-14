@@ -5,7 +5,17 @@
   <title>WeatherApp</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script type="text/javascript">
+    window.onload = function () {
+        var images = ['assets/images/mountain1.jpg', 'assets/images/mountain2.jpg', 'assets/images/mountain3.jpg', 'assets/images/mountain4.jpg', 'assets/images/mountain5.jpg'];
+        var image = images[Math.floor(Math.random() * images.length)];
+        document.getElementsByTagName('body')[0].style.backgroundImage = "url('" + image + "')";
+        document.getElementsByTagName('body')[0].style.backgroundRepeat = "no-repeat";
+        document.getElementsByTagName('body')[0].style.backgroundSize = "cover";
+    }
+</script>
 </head>
 <body>
   <app-root></app-root>

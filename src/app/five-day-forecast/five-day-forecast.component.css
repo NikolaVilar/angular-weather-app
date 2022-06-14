@@ -1,0 +1,14 @@
+img{
+  width: 100px;
+  display: block;
+  align-items: center;
+}
+
+.selected{
+  font-weight: bold;
+  border: 3px solid #eee;
+}
+
+.wind_icon{
+  width: 30%;
+}
