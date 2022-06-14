@@ -27,10 +27,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Running the application 
--open file in vscode
--open terminal from vscode
--ng serve --port 5000
--open browser localhost:5000
+- open file in vscode
+- open terminal from vscode
+- ng serve --port 5000
+- open browser localhost:5000
 
 ## The API should look something like this
 ```
